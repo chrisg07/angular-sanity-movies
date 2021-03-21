@@ -47,3 +47,4 @@ Thumbs.db
 
 # Sanity Files
 /sanitymovies/node_modules
+/sanitymovies/dist

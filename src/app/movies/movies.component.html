@@ -1,13 +1,11 @@
-<mat-grid-list cols="2">
-    <mat-grid-tile *ngFor="let movie of movies">
-        <mat-card class="example-card">
-            <mat-card-header>
-              <mat-card-title>{{ movie.title }}</mat-card-title>
-              <mat-card-subtitle>Released: {{ movie.releaseDate | date }}</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-            <mat-card-content [innerHTML]="movie.overview"></mat-card-content>
-        </mat-card>
-    </mat-grid-tile>
-</mat-grid-list>
+<div class="card-grid">
+    <mat-card *ngFor="let movie of movies" class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{ movie.title }}</mat-card-title>
+            <mat-card-subtitle>Released: {{ movie.releaseDate | date }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="urlFor(movie.poster).width(200).height(200)" alt="Photo of a Shiba Inu">
+        <mat-card-content class="card-content" [innerHTML]="movie.teaser"></mat-card-content>
+    </mat-card>
+</div>
   
